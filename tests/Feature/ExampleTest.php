@@ -2,11 +2,14 @@
 
 namespace Tests\Feature;
 
-// use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Models\Quote;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
+    use RefreshDatabase;
+
     /**
      * A basic test example.
      */
@@ -16,4 +19,15 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    /**
+     * Test if the requested_amount goes up by 1.
+     */
+    public function test_the_count_of_existing_quotes (): void
+    {
+        Quote::factory()->count(20)->make();
+
+        //todo: get one quote, use upsert job and check if amount is +1
+    }
+
 }

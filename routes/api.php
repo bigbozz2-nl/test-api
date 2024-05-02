@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\API\v1\QuoteApiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware(['with-password'])->prefix('v1')->group(function () {
+    Route::get('/get-quotes', [QuoteApiController::class, 'getQuotes'])->name('api.getQuotes');
 });

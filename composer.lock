@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c491b8531eec05ba41a11d9276a5749",
+    "content-hash": "9e8ddde756e1afdcb2e5571cd614101b",
     "packages": [
         {
             "name": "brick/math",
@@ -505,6 +505,53 @@
                 }
             ],
             "time": "2023-10-06T06:47:41+00:00"
+        },
+        {
+            "name": "elic-dev/laravel-site-protection",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elic-dev/laravel-site-protection.git",
+                "reference": "0b124ccd7837f92609cd720a0bb6ce30d2decb72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elic-dev/laravel-site-protection/zipball/0b124ccd7837f92609cd720a0bb6ce30d2decb72",
+                "reference": "0b124ccd7837f92609cd720a0bb6ce30d2decb72",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ElicDev\\SiteProtection\\SiteProtectionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ElicDev\\SiteProtection\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Lill",
+                    "email": "m.lill@gmx.de"
+                }
+            ],
+            "description": "Protect your site with a simple password form",
+            "support": {
+                "issues": "https://github.com/elic-dev/laravel-site-protection/issues",
+                "source": "https://github.com/elic-dev/laravel-site-protection/tree/1.2.0"
+            },
+            "time": "2023-07-12T07:16:29+00:00"
         },
         {
             "name": "fruitcake/php-cors",
