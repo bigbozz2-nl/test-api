@@ -36,7 +36,7 @@ class UpsertQuotesJob
             }
 
             $newQuote = new Quote();
-            $newQuote->quote = htmlspecialchars($quote);
+            $newQuote->quote = $quote;
             $newQuote->request_amount = 1;
             $newQuote->save();
 
